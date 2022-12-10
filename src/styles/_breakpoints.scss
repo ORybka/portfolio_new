@@ -1,0 +1,24 @@
+@mixin laptopBreakpoint {
+  @media (max-width: 1350px) {
+    @content;
+  }
+}
+
+@mixin tabletBreakpoint {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobileBreakpoint {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin smallMobileBreakpoint {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+

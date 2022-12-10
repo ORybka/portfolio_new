@@ -1,0 +1,180 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+@import '../../styles/breakpoints';
+@import '../../styles/animations';
+
+.front-page-container {
+  position: relative;
+  @include flexbox-center;
+  height: 100vh;
+
+  .mobile-tap {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    animation: bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+  }
+}
+
+.front-page-inner-container {
+  @include flexbox-space-between;
+  width: 100%;
+
+  @include tabletBreakpoint {
+    @include flex-direction-column-reverse;
+  }
+
+  .left-block {
+    width: 55%;
+    margin-right: 5%;
+
+    @include tabletBreakpoint {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .right-block {
+    @include flexbox-center;
+    width: 40%;
+
+    @include tabletBreakpoint {
+      justify-content: center;
+      width: 100%;
+      margin: 2rem 0;
+      padding-right: 0;
+    }
+
+    a {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -1.5rem;
+        right: -1.5rem;
+        width: 100%;
+        height: 100%;
+        border: 6px solid $highlight;
+        border-radius: $border-radius;
+        transition: $transition;
+        z-index: -1;
+
+        @include mobileBreakpoint {
+          content: none;
+        }
+      }
+
+      &:hover:after {
+        bottom: -0.40rem;
+        right: -0.5rem;
+      }
+    }
+
+    img {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      max-width: 27.5rem;
+      border-radius: $border-radius;
+      transition: $transition;
+      z-index: 1;
+
+      &:hover {
+        bottom: -0.5rem;
+        right: -0.5rem;
+
+        @include tabletBreakpoint {
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      @include laptopBreakpoint {
+        max-width: 20rem;
+      }
+
+      @include mobileBreakpoint {
+        max-height: 50vh;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+
+  .main-title {
+    @include flexbox-start;
+    @include flex-direction-column;
+
+    @include tabletBreakpoint {
+      @include flexbox-center;
+    }
+    
+    span {
+      position: relative;
+      padding-left: .5rem;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: $main-title-font;
+        transition: $transition;
+        z-index: -1;
+      }
+
+      &:hover:after {
+        width: calc(100% + .5rem);
+
+        @media (hover: none) {
+          width: 0;
+        }
+      }
+
+      @include tabletBreakpoint {
+        margin: .3rem 0;
+      }
+    }
+
+    a {
+      -webkit-text-stroke: 1px #000000;
+
+      @include tabletBreakpoint {
+        padding: 0 5%;
+        background-color: $main-title-font;
+      }
+    }
+
+    .name {
+      color: $main-font;
+
+      &:after {
+        background-color: $main-font;
+      }
+
+      &:hover a {
+        color: $main-title-font;
+
+        @media (hover: none) {
+          color: inherit;
+        }
+      }
+
+      a {
+        @include tabletBreakpoint {
+          color: $highlight;
+          background-color: $main-font;
+        }
+      }
+    }
+  }
+
+
+}

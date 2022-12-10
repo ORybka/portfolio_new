@@ -1,13 +1,14 @@
 import React, {useState,useEffect} from 'react';
 import {useLocation} from "react-router-dom";
 import {Link} from "react-router-dom";
+import {frontPageArr} from '../../data/content'
 import './front-page.scss';
 
 function FrontPage() {
     const location = useLocation();
-    const [mobile, setMobile] = useState(false);
-    const [hoverId, setHoverId] = useState('');
-    const [showLink, setShowLink] = useState(false);
+    const [mobile, setMobile] = useState<boolean>(false);
+    const [hoverId, setHoverId] = useState<string>('');
+    const [showLink, setShowLink] = useState<boolean>(false);
 
     useEffect(() => {
         window.innerWidth > 767 ? setMobile(true) : setMobile(false);
@@ -23,7 +24,7 @@ function FrontPage() {
     }
 
     const onTouchStart = () => {
-        setTimeout(() => setShowLink(!showLink), 400)
+        setTimeout(() => setShowLink(!showLink), 300)
     }
 
     return (
@@ -32,25 +33,17 @@ function FrontPage() {
             <div className="front-page-inner-container">
                 <div className="left-block">
                     <h1 className='main-title'>
-                        <span onMouseEnter={mobile ? onMouseEnter : undefined}
-                              onMouseLeave={mobile ? leaveElement : undefined} id='about-link'
-                              className='link-item'>
-                            {hoverId === 'about-link' || showLink ? <Link to='/home/'>About</Link> : 'Hello'}
-                        </span>
-                        <span onMouseEnter={mobile ? onMouseEnter : undefined}
-                              onMouseLeave={mobile ? leaveElement : undefined} id='projects-link'
-                              className='link-item'>
-                            {hoverId === 'projects-link' || showLink ? (
-                                <Link to={{pathname: "/home/", hash: "#projects"}}>Projects</Link>
-                            ) : 'My name is'}
-                        </span>
-                        <span onMouseEnter={mobile ? onMouseEnter : undefined}
-                              onMouseLeave={mobile ? leaveElement : undefined} id='contact-link'
-                              className='link-item name'>
-                            {hoverId === 'contact-link' || showLink ? (
-                                <Link to={{pathname: "/home/", hash: "#contact"}}>Contact</Link>
-                            ) : 'Olha'}
-                        </span>
+                        {frontPageArr.map(el => {
+                            return (
+                                <span onMouseEnter={mobile ? onMouseEnter : undefined}
+                                  onMouseLeave={mobile ? leaveElement : undefined} id={el.id}
+                                  className={`link-item ${el.additionalClassName}`} key={el.id}>
+                                    {hoverId === el.id || showLink ? (
+                                        <Link to={{pathname: "/home/", hash: `#${el.hash}`}}>{el.hoveredText}</Link>
+                                    ) : el.text}
+                                </span>
+                            )
+                        })}
                     </h1>
                 </div>
                 <div className="right-block">

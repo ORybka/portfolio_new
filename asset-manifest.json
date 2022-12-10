@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio_new/static/css/main.f01961e1.css",
+    "main.js": "/portfolio_new/static/js/main.08bc1c20.js",
+    "static/media/AlegreyaSansSC-BlackItalic.ttf": "/portfolio_new/static/media/AlegreyaSansSC-BlackItalic.024e0d78d2dfb08d99c1.ttf",
+    "static/media/AlegreyaSansSC-Black.ttf": "/portfolio_new/static/media/AlegreyaSansSC-Black.9a12c57dcb1b3f25ec92.ttf",
+    "index.html": "/portfolio_new/index.html",
+    "main.f01961e1.css.map": "/portfolio_new/static/css/main.f01961e1.css.map",
+    "main.08bc1c20.js.map": "/portfolio_new/static/js/main.08bc1c20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f01961e1.css",
+    "static/js/main.08bc1c20.js"
+  ]
+}

@@ -37,7 +37,7 @@ function FrontPage() {
                             return (
                                 <span onMouseEnter={mobile ? onMouseEnter : undefined}
                                   onMouseLeave={mobile ? leaveElement : undefined} id={el.id}
-                                  className={`link-item ${el.additionalClassName}`} key={el.id}>
+                                  className={`link-item${el.additionalClassName}`} key={el.id}>
                                     {hoverId === el.id || showLink ? (
                                         <Link to={{pathname: "/home/", hash: `#${el.hash}`}}>{el.hoveredText}</Link>
                                     ) : el.text}

@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixin';
+
+.experience-inner-block {
+  margin-top: 2rem;
+  padding: 1.875rem 3rem;
+  background: $block-bg;
+
+  h6 {
+    margin-bottom: 1rem;
+    @include font-bold;
+    font-size: 1.625rem;
+    line-height: 2rem;
+
+    span {
+      font-size: inherit;
+      line-height: inherit;
+      color: $highlight;
+    }
+  }
+
+  .period {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  ul {
+    margin-top: 2rem;
+    padding-left: 2rem;
+
+    li {
+      list-style: disc;
+    }
+  }
+}

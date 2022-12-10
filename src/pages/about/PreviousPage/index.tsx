@@ -1,5 +1,5 @@
 import React from 'react';
-import './PreviousPage.scss';
+import './previous-page.scss';
 
 function PreviousPage() {
     return (

@@ -15,7 +15,6 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   font-size: 16px;
 
@@ -42,10 +41,11 @@ a {
 .main-container {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1290px;
   margin: 0 auto;
 
   @include laptopBreakpoint {
+    width: 96%;
     max-width: 1100px;
   }
 
@@ -61,4 +61,25 @@ a {
   }
 }
 
+.page-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include laptopBreakpoint {
+    max-width: 900px;
+  }
+
+  @include tabletBreakpoint {
+    width: 90%;
+    max-width: none;
+  }
+
+  @include mobileBreakpoint {
+    width: auto;
+    padding: 0 5%;
+    margin: 0 auto;
+  }
+}
 

@@ -11,9 +11,19 @@
   color: $main-title-font;
   -webkit-text-stroke: 1px $black;
 
+  @include laptopBreakpoint {
+    font-size: 4.5rem;
+    line-height: 6rem;
+  }
+
   @include mobileBreakpoint {
-    //font-size: 2rem;
-    //line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  @include smallMobileBreakpoint {
+    font-size: 2.25rem;
+    line-height: 3rem;
   }
 }
 

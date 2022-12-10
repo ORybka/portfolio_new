@@ -1,7 +1,7 @@
 import React from 'react';
-import './CurrentPage.scss';
+import './current-experience.scss';
 
-function CurrentPage() {
+function CurrentExperience() {
     return (
         <div className='current-page-container'>
             <h1 className='main-title'>Current Page</h1>
@@ -9,4 +9,4 @@ function CurrentPage() {
     );
 }
 
-export default CurrentPage;
+export default CurrentExperience;

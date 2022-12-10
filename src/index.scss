@@ -1,0 +1,64 @@
+@import 'styles/variables';
+@import 'styles/mixin';
+@import 'styles/typography';
+@import 'styles/breakpoints';
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 16px;
+
+  @include mobileBreakpoint {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  @include font-regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $main-font;
+  background: $main-bg;
+  @include bg-cover;
+}
+
+a {
+  color: $main-font;
+  text-decoration: none;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include laptopBreakpoint {
+    max-width: 1100px;
+  }
+
+  @include tabletBreakpoint {
+    width: 90%;
+    max-width: none;
+  }
+
+  @include mobileBreakpoint {
+    width: auto;
+    padding: 0 5%;
+    margin: 0 auto;
+  }
+}
+
+

@@ -45,6 +45,7 @@
   @include font-title;
   font-size: 3rem;
   line-height: 4rem;
+  text-transform: uppercase;
   color: $main-font;
 
   @include mobileBreakpoint {

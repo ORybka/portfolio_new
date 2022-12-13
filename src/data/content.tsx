@@ -1,5 +1,5 @@
 import React from "react";
-import {TitleElement, ExperienceElement} from "./interfaces";
+import {TitleElement, ExperienceElement, Project} from "./interfaces";
 
 const frontPageArr: Array<TitleElement> = [
     {
@@ -85,4 +85,46 @@ const experienceArr: Array<ExperienceElement> = [
     },
 ]
 
-export {frontPageArr, experienceArr};
+const skillsArr: Array<string> = ['all', 'react', 'redux', 'typescript', 'javascript', 'css/sass', 'html'];
+const projectTypeArr: Array<string> = ['all', 'commercial', 'pet-project'];
+
+const projectsArr: Array<Project> = [
+    {
+        name: 'cryptotarots',
+        type: 'commercial',
+        technologies: ['react', 'css/sass'],
+        link: 'https://www.cryptotarots.io/'
+    },
+    {
+        name: 'smart',
+        type: "commercial",
+        technologies: ['react', 'css/sass'],
+        link: 'https://www.smart-gravity.com/'
+    },
+    {
+        name: 'top-automation',
+        type: "commercial",
+        technologies: ['javascript', 'css/sass', 'html', 'markup for wordpress'],
+        link: 'https://www.topautomation.com.ua/'
+    },
+    {
+        name: 'ppo',
+        type: "commercial",
+        technologies: ['react', 'redux', 'typescript'],
+        link: 'https://www.ppo.com/'
+    },
+    {
+        name: 'recipes-app',
+        type: 'pet-project',
+        technologies: ['react', 'css/sass'],
+        link: 'https://www.cryptotarots.io/'
+    },
+    {
+        name: 'memory',
+        type: 'pet-project',
+        technologies: ['javascript', 'css/sass', 'html'],
+        link: 'https://orybka.github.io/memory-pair-game/'
+    }
+]
+
+export {frontPageArr, experienceArr, skillsArr, projectTypeArr, projectsArr};

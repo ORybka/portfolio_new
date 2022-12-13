@@ -50,9 +50,9 @@ function FrontPage() {
                     {
                         mobile ? (
                             <Link to='/home/'>
-                                <img src="/assets/images/profile.png" alt="Olha Rybchynska"/>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/profile.webp`} alt="Olha Rybchynska"/>
                             </Link>
-                        ) : <img src="/assets/images/profile.png" alt="Olha Rybchynska"/>
+                        ) : <img src={`${process.env.PUBLIC_URL}/assets/images/profile.webp`} alt="Olha Rybchynska"/>
                     }
                 </div>
             </div>

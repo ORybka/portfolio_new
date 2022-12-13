@@ -20,3 +20,9 @@ export interface ExperienceElement {
     description: ExperienceElementDesc,
 }
 
+export interface Project {
+    name: string,
+    type: 'commercial' | 'pet-project',
+    technologies: Array<string>,
+    link: string
+}

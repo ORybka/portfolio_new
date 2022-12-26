@@ -40,14 +40,19 @@
   font-size: 30px;
   line-height: 37px;
   color: $highlight;
+  transition: top .2s ease-in-out;
+
+  &:hover {
+    top: -.15rem;
+  }
 
   &:after {
     content: '';
     position: absolute;
-    bottom: -.5rem;
+    bottom: -.2rem;
     left: 0;
     width: 0;
-    height: 3px;
+    height: 1px;
     background-color: $highlight;
     transition: $transition;
   }

@@ -3,6 +3,7 @@ import {useLocation} from "react-router-dom";
 import CurrentExperience from "../../components/CurrentExperience";
 import Projects from "../../components/Projects";
 import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
 import './main-page.scss';
 
 function MainPage() {
@@ -25,6 +26,7 @@ function MainPage() {
             <CurrentExperience />
             <Projects />
             <Contact />
+            <Footer />
         </div>
     );
 }

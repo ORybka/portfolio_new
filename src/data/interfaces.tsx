@@ -30,3 +30,8 @@ export interface Project {
 export interface SelectFunc {
     filter(e:MouseEvent<HTMLButtonElement>): void;
 }
+
+export interface FooterLink {
+    name: string,
+    link: string
+}

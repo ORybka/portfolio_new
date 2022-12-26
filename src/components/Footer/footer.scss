@@ -1,0 +1,70 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+@import '../../styles/breakpoints';
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @include laptopBreakpoint {
+    position: absolute;
+    bottom: -3rem;
+  }
+}
+
+.footer-inner-container {
+  @include flexbox-space-between;
+  width: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+
+  @include laptopBreakpoint {
+    max-width: 90%;
+  }
+}
+
+.footer-decor {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 8rem;
+    background-color: $main-font;
+  }
+}
+
+.left-links ul {
+  position: absolute;
+  top: -17rem;
+  left: -.9rem;
+}
+
+.link-block {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: .75rem;
+}
+
+@include linksNames(('github', 'linkedin', 'telegram'));
+
+.right-links {
+  a {
+    position: absolute;
+    top: -17rem;
+    left: -7.05rem;
+    transform: rotate(90deg);
+    transition: top .2s ease-in-out;
+
+    &:hover {
+      color: $highlight;
+      top: -17.15rem;
+    }
+  }
+}

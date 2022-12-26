@@ -3,6 +3,8 @@
 @import "mixin";
 
 .main-title {
+  padding-top: 6rem;
+  margin-top: -3rem;
   margin-bottom: 1rem;
   @include font-title;
   text-transform: uppercase;

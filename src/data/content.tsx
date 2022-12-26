@@ -1,5 +1,5 @@
 import React from "react";
-import {TitleElement, ExperienceElement, Project} from "./interfaces";
+import {TitleElement, ExperienceElement, Project, FooterLink} from "./interfaces";
 
 const frontPageArr: Array<TitleElement> = [
     {
@@ -36,7 +36,7 @@ const experienceArr: Array<ExperienceElement> = [
                 'development of websites from scratch using HTML, CSS/SASS, JS;',
                 'development of internal company projects using HTML, CSS/SASS, JS with further maintenance and support;',
                 'feature implementation and fixing of HTML and Wordpress websites;',
-                'support of existing projects.',
+                'support of the existing projects.',
             ],
         }
     },
@@ -85,7 +85,7 @@ const experienceArr: Array<ExperienceElement> = [
     },
 ]
 
-const skillsArr: Array<string> = ['all', 'react', 'redux', 'typescript', 'javascript', 'css/sass', 'html'];
+const skillsArr: Array<string> = ['all', 'react', 'redux', 'typescript', 'javascript', 'css/scss', 'html'];
 const projectTypeArr: Array<string> = ['all', 'commercial', 'pet-project'];
 
 const projectsArr: Array<Project> = [
@@ -127,4 +127,19 @@ const projectsArr: Array<Project> = [
     }
 ]
 
-export {frontPageArr, experienceArr, skillsArr, projectTypeArr, projectsArr};
+const footerLinksArr: Array<FooterLink> = [
+    {
+        name: 'github',
+        link: 'https://github.com/ORybka'
+    },
+    {
+        name: 'linkedin',
+        link: 'https://www.linkedin.com/in/olha-rybchynska/'
+    },
+    {
+        name: 'telegram',
+        link: 'https://t.me/orybka94'
+    }
+]
+
+export {frontPageArr, experienceArr, skillsArr, projectTypeArr, projectsArr, footerLinksArr};

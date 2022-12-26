@@ -1,0 +1,58 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.contact-page-inner-container {
+  width: 55%;
+  min-width: 36rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+  text-align: center;
+
+  .block-title {
+    @include font-regular;
+    text-transform: capitalize;
+  }
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 2rem 0 3rem;
+  padding: 1rem 5rem;
+  @include font-regular;
+  font-size: 36px;
+  line-height: 44px;
+  color: $highlight;
+  border: $btn-contact-bd;
+  border-radius: $border-radius;
+  transition: $transition;
+
+  &:hover {
+    border: $btn-contact-bd-hover;
+    background-color: $main-font;
+  }
+}
+
+.cv-link {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0 3rem;
+  @include font-regular;
+  font-size: 30px;
+  line-height: 37px;
+  color: $highlight;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: $highlight;
+    transition: $transition;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}

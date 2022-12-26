@@ -143,4 +143,11 @@
       }
     }
   }
+
+  &.future-projects {
+    ul li {
+      max-width: none;
+      width: 90%;
+    }
+  }
 }

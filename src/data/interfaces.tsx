@@ -1,4 +1,4 @@
-import React, {ReactElement} from "react";
+import React, {ReactElement, MouseEvent} from "react";
 
 export interface TitleElement {
     id: string,
@@ -25,4 +25,8 @@ export interface Project {
     type: 'commercial' | 'pet-project',
     technologies: Array<string>,
     link: string
+}
+
+export interface SelectFunc {
+    filter(e:MouseEvent<HTMLButtonElement>): void;
 }
